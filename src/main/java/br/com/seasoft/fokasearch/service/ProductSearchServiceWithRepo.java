@@ -1,5 +1,6 @@
 package br.com.seasoft.fokasearch.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,22 @@ public class ProductSearchServiceWithRepo {
 	
 	public List<Product> findByName(String name) {
 		return productRepository.findByName(name);
+	}
+	
+	public List<Product> findByDescription(String desc) {
+		return productRepository.findByDescription(desc);
+	}
+	
+	public List<String> findByDescriptionString(String desc) {
+		List<Product> listProduct = productRepository.findByDescription(desc);
+
+		List<String> descriptions = new ArrayList<String>();
+		
+		listProduct.forEach(product->{
+			descriptions.add(product.getDescription().substring(0, 30));
+		});
+		
+		return descriptions;
 	}
 
 }

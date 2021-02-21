@@ -13,15 +13,20 @@ class ProductTests {
 	@Autowired
 	private ProductSearchServiceWithRepo productDao;
 
-	//@Test
+	/*
+	@Test
 	void createProductIndexTest() {
-		Product p1 = new Product();
-		p1.setName("Name 2");
-		p1.setCategory("Category 2");
-		p1.setDescription("Description 2");
-		
-		productDao.createProductIndex(p1);
+		Product p1 = null;
+		for (int i = 0; i < 100; i++) {
+			p1 = new Product();
+			p1.setName("Name " + i);
+			p1.setCategory("Category " + i);
+			p1.setDescription("Ainda assim, existem dúvidas a respeito de como o desafiador cenário globalizado possibilita uma melhor visão global das condições inegavelmente apropriadas. " + i);
+			
+			productDao.createProductIndex(p1);
+		}
 	}
+	*/
 	
 	//@Test
 	void findAllTest() {

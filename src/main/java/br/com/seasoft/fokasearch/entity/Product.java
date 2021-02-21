@@ -5,11 +5,13 @@ import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.ToString;
 
 @Data
 @ToString
+@Builder
 @Document(indexName = "productindex")
 public class Product {
 
